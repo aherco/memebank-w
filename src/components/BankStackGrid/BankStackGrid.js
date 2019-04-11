@@ -34,7 +34,7 @@ class BankStackGrid extends Component {
       // Animation
       duration: 100,
 
-      // Layout updating :: this is a hack and needs to be changed to something else
+      // Layout updating
       onMouseEnter: this.updateLayout,
       onMouseLeave: this.updateLayout,
     };
