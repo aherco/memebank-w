@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
-import { connect } from 'react-redux';
+import BankStackGrid from '../../components/BankStackGrid/BankStackGrid.js';
 
 class Bank extends Component {
   componentDidMount() {
@@ -12,24 +12,14 @@ class Bank extends Component {
   render() {
     return (
       <div className='Bank'>
-
+        <BankStackGrid/>
       </div>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  items: state.items,
-});
-
 Bank.propTypes = {
   getItems: PropTypes.func.isRequired,
-  items: PropTypes.array.isRequired,
 };
 
-export default withRouter(
-  connect(
-    mapStateToProps,
-    null,
-  )(Bank)
-);
+export default withRouter(Bank);
