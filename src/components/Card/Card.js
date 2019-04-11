@@ -9,14 +9,20 @@ export default class Card extends Component {
   constructor(props) {
     super(props);
     this.toggleModal = this.toggleModal.bind(this);
+    this.onLoad = this.onLoad.bind(this);
 
     this.state = {
       showModal: false,
+      loaded: false,
     };
   }
 
   toggleModal() {
     this.setState({ showModal: !this.state.showModal });
+  }
+
+  onLoad() {
+    this.setState({ loaded: true });
   }
 
   render() {
@@ -31,16 +37,20 @@ export default class Card extends Component {
     };
 
     const imgProps = {
-      alt: '',
       src: this.props.src,
       onClick: this.toggleModal,
+      onLoad: this.onLoad,
+      style: this.state.loaded ? {} : { display: 'none' },
     }
 
-    const img = <img {...imgProps}/>;
+    const img = <img alt='' {...imgProps}/>;
+    const placeholder = this.state.loaded ? null : <div className='PlaceholderCard'></div>;
     const modal = <ReactModal {...modalProps}>{img}</ReactModal>;
+
     return (
       <div className='Card'>
         {img}
+        {placeholder}
         {modal}
       </div>
     );

@@ -8,12 +8,23 @@ import Card from '../Card/Card.js';
 import './BankStackGrid.css';
 
 class BankStackGrid extends Component {
+  constructor(props) {
+    super(props);
+    this.updateLayout = this.updateLayout.bind(this);
+    this.state = { items: [] };
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (this.props.items !== prevProps.items) {
+      this.setState({ items: this.unmarshallItems(this.props.items) }) ;
+    }
+  }
 
   unmarshallItems(items) {
     return items.reverse().map((item) => { return <Card key={item.ID} src={item.content}/>; });
   }
 
-  updateLayout = () => {
+  updateLayout() {
     this.grid.updateLayout();
   }
 
@@ -23,16 +34,13 @@ class BankStackGrid extends Component {
       // Set a reference for the grid instance
       gridRef: grid => this.grid = grid,
 
-      // Resize image height on load
-      monitorImagesLoaded: true,
-
       // Layout
       columnWidth: '25%',
       gutterWidth: 10,
       gutterHeight: 10,
 
       // Animation
-      duration: 100,
+      duration: 0,
 
       // Layout updating
       onMouseEnter: this.updateLayout,
@@ -41,7 +49,7 @@ class BankStackGrid extends Component {
 
     return (
       <div className='BankStackGrid'>
-        <StackGrid {...gridProps}>{this.unmarshallItems(this.props.items)}</StackGrid>
+        <StackGrid {...gridProps}>{this.state.items}</StackGrid>
       </div>
     );
   }
