@@ -3,19 +3,19 @@ import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import Bank from './scenes/Bank/Bank.js';
-import { getItemsByGuild } from './services/items/actions.js';
+import { getItemsByChannel } from './services/items/actions.js';
 
 import './App.css';
 
 class App extends Component {
   render() {
 
-    const guildBank = () => { return <Bank getItems={this.props.getItemsByGuild}/>; };
+    const channelBank = () => { return <Bank getItems={this.props.getItemsByChannel}/>; };
 
     return (
       <div className='App'>
         <Switch>
-          <Route path='/:id' component={guildBank}/>
+          <Route path='/:guild/:channel/:channel_id' component={channelBank}/>
         </Switch>
       </div>
     );
@@ -23,7 +23,7 @@ class App extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  getItemsByGuild: (id) => { dispatch(getItemsByGuild(id)); },
+  getItemsByChannel: (id) => { dispatch(getItemsByChannel(id)); },
 });
 
 export default connect(

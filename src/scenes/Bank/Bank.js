@@ -9,13 +9,17 @@ import './Bank.css';
 
 class Bank extends Component {
   componentDidMount() {
-    this.props.getItems(this.props.match.params.id);
+    this.props.getItems(this.props.match.params.channel_id);
+    document.title = `memebank #${this.props.match.params.channel}`;
   }
 
   render() {
     return (
       <div className='Bank'>
-        <TopBar/>
+        <TopBar
+          guild={this.props.match.params.guild}
+          channel={this.props.match.params.channel}
+        />
         <div className='content'>
           <BankStackGrid/>
         </div>

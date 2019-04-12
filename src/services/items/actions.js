@@ -1,16 +1,16 @@
-export const GET_ITEMS_BY_GUILD = 'GET_ITEMS_BY_GUILD';
-export const GET_ITEMS_BY_GUILD_SUCCESS = 'GET_ITEMS_BY_GUILD_SUCCESS';
+export const GET_ITEMS_BY_CHANNEL = 'GET_ITEMS_BY_CHANNEL';
+export const GET_ITEMS_BY_CHANNEL_SUCCESS = 'GET_ITEMS_BY_CHANNEL_SUCCESS';
 
-export const getItemsByGuild = (guildID) => {
+export const getItemsByChannel = (channelID) => {
   return {
-    type: GET_ITEMS_BY_GUILD,
-    guildID,
+    type: GET_ITEMS_BY_CHANNEL,
+    channelID,
   };
 };
 
-export const getItemsByGuildSuccess = (items) => {
+export const getItemsByChannelSuccess = (items) => {
   return {
-    type: GET_ITEMS_BY_GUILD_SUCCESS,
+    type: GET_ITEMS_BY_CHANNEL_SUCCESS,
     items,
   };
 };
