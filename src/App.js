@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import Bank from './scenes/Bank/Bank.js';
+import Home from './scenes/Home/Home.js';
 import { getItemsByChannel } from './services/items/actions.js';
 
 import './App.css';
@@ -16,6 +17,8 @@ class App extends Component {
       <div className='App'>
         <Switch>
           <Route path='/:guild/:channel/:channel_id' component={channelBank}/>
+          <Route path='/' component={Home}/>
+          <Redirect to='/' component={Home}/>
         </Switch>
       </div>
     );

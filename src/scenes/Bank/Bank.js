@@ -17,6 +17,7 @@ class Bank extends Component {
     return (
       <div className='Bank'>
         <TopBar
+          bank
           guild={this.props.match.params.guild}
           channel={this.props.match.params.channel}
         />
