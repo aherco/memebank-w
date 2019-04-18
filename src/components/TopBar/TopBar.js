@@ -13,7 +13,7 @@ export default class TopBar extends Component {
     return (
       <div className='TopBar'>
         <span id='tb-logo'>
-          meme<span id='tb-logo2'>bank</span>
+	  {this.props.white}<span id='tb-logo2'>{this.props.pink}</span>
           {this.props.bank ? gcname : null}
         </span>
       </div>
@@ -22,7 +22,14 @@ export default class TopBar extends Component {
 }
 
 TopBar.propTypes = {
+  white: PropTypes.string,
+  pink: PropTypes.string,
   guild: PropTypes.string,
   channel: PropTypes.string,
   bank: PropTypes.bool,
+};
+
+TopBar.defaultProps = {
+  white: 'meme',
+  pink: 'bank',
 };

@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import TopBar from '../../components/TopBar/TopBar.js';
-import './Home.css';
+import WindowBox from '../../components/WindowBox/WindowBox.js';
 
 export default class Home extends Component {
   render() {
     return (
       <div className='Home'>
-        <div id='h-content'>
-          <TopBar/>
+        <WindowBox>
           <p>welcome to memebank $ ~</p>
           <p>this is a site for a bot that makes photo/gif albums from your discord server</p>
           <pre>
@@ -35,7 +34,7 @@ export default class Home extends Component {
           ⢀⢀⢀⢀⢀⢀⢀⢀⠻⠿⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢠⣿⣿⡇<br/>
           </pre>
           <p>~ please enjoy ~</p>
-        </div>
+        </WindowBox>
       </div>
     );
   }
