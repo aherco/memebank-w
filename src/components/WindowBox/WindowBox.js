@@ -8,10 +8,18 @@ import './WindowBox.css';
 export default class WindowBox extends Component {
   render() {
     return (
-      <div className='WindowBox'>
+      <div id={this.props.id} className='WindowBox'>
 	<TopBar white={this.props.white} pink={this.props.pink}/>
-        {this.props.children}
+	<div className='wb-content'>
+          {this.props.children}
+	</div>
       </div>
     );
   }
 }
+
+WindowBox.propTypes = {
+  id: PropTypes.string,
+  white: PropTypes.string,
+  pink: PropTypes.string,
+};

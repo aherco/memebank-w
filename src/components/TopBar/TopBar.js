@@ -9,11 +9,19 @@ export default class TopBar extends Component {
       <span id='tb-guild'>&nbsp;~{this.props.guild}</span>,
       <span id='tb-channel'>#{this.props.channel}</span>,
     ];
+    
+    // if both are not defined set default
+    let text;
+    if (!this.props.white && !this.props.pink) {
+      text = <span>meme<span id='tb-logo2'>bank</span></span>
+    } else {
+      text = <span>{this.props.white}<span id='tb-logo2'>{this.props.pink}</span></span>
+    }
 
     return (
       <div className='TopBar'>
         <span id='tb-logo'>
-	  {this.props.white}<span id='tb-logo2'>{this.props.pink}</span>
+	  {text}
           {this.props.bank ? gcname : null}
         </span>
       </div>
@@ -29,7 +37,3 @@ TopBar.propTypes = {
   bank: PropTypes.bool,
 };
 
-TopBar.defaultProps = {
-  white: 'meme',
-  pink: 'bank',
-};
