@@ -16,7 +16,6 @@ class Home extends Component {
     return (
       <div className='Home'>
         <TopBar/>
-	
         <WindowBox id='h-nav' white='home'>
 	  <p>woomfy@memebank $ ~</p>
           <a 
@@ -34,12 +33,11 @@ class Home extends Component {
 	  <a 
 	    href='http://www.memebank.me/memebank-official/public/568601893673107466'
 	  >/public memebank</a>
-
 	</WindowBox>
 
         <WindowBox white='welcome'>
           <p>woomfy@memebank $ ~</p>
-          <p>this is a site for a bot that makes photo/gif albums from your discord server</p>
+	  <p>this is a site for a bot that makes photo/gif albums from your discord server</p>
           <pre id='h-asciiart'>
           ⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⠶⣿⣭⡧⡤⣤⣻⣛⣹⣿⣿⣿⣶⣄<br/>
           ⢀⢀⢀⢀⢀⢀⢀⢀⢀⣼⣊⣤⣶⣷⣶⣧⣤⣽⣿⣿⣿⣿⣿⣿⣷<br/>
@@ -64,10 +62,10 @@ class Home extends Component {
           ⢀⢀⢀⢀⢀⢀⢀⢀⣾⣿⡿⠃⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢸⣿⡏<br/>
           ⢀⢀⢀⢀⢀⢀⢀⢀⠻⠿⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢠⣿⣿⡇<br/>
           </pre>
-          <p>~ please enjoy ~</p>
+	  <p>~ please enjoy ~</p>
+	  <br/>
+	  <p>disclaimer: im just starting out here so if u see a bug, email or dm me</p>
         </WindowBox>
-
-
 
 	<WindowBox id='h-faq' white='faq'>
           <p>woomfy@memebank $ ~</p>
@@ -79,6 +77,10 @@ class Home extends Component {
 	  <FAQItem
 	    q='what if i don`t want a memebank for a specific channel?'
 	    a='you can simply edit the permissions of the bot to restrict it from reading and managing messages for that specific channel.'
+	  />
+	  <FAQItem
+	    q='why doesn`t discord already have this feature?'
+	    a='i really don`t know, but that`s why i made this bot. you`re welcome'
 	  />
           <FAQItem
 	    q='what if my question isn`t answered here?'
