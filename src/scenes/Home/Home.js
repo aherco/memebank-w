@@ -80,7 +80,7 @@ class Home extends Component {
 	  />
 	  <FAQItem
 	    q='why doesn`t discord already have this feature?'
-	    a='i really don`t know, but that`s why i made this bot. you`re welcome'
+	    a='i really don`t know, but that`s why i made this bot. you`re welcome.'
 	  />
           <FAQItem
 	    q='what if my question isn`t answered here?'
