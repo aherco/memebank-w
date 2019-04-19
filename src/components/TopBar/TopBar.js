@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import './TopBar.css';
 
-export default class TopBar extends Component {
+export default class TopBar extends PureComponent {
   render() {
 
     const gcname = [

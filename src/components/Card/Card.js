@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import ReactModal from 'react-modal';
 
 import './Card.css';
 
-export default class Card extends Component {
+export default class Card extends PureComponent {
   constructor(props) {
     super(props);
     this.toggleModal = this.toggleModal.bind(this);

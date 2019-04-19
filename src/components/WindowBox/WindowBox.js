@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import TopBar from '../TopBar/TopBar.js';
 
 import './WindowBox.css';
 
-export default class WindowBox extends Component {
+export default class WindowBox extends PureComponent {
   render() {
     return (
       <div id={this.props.id} className='WindowBox'>
