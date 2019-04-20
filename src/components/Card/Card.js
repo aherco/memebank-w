@@ -1,15 +1,18 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import request from 'superagent';
 import ReactModal from 'react-modal';
+
 
 import './Card.css';
 
-export default class Card extends PureComponent {
+export default class Card extends Component {
   constructor(props) {
     super(props);
     this.toggleModal = this.toggleModal.bind(this);
     this.onLoad = this.onLoad.bind(this);
+    this.onError = this.onError.bind(this);
 
     this.state = {
       showModal: false,
@@ -23,6 +26,14 @@ export default class Card extends PureComponent {
 
   onLoad() {
     this.setState({ loaded: true });
+  }
+  
+  onError() {
+    request
+      .delete(`https://1t7lfirpvc.execute-api.us-east-1.amazonaws.com/dev/items/${this.props.id}`)
+      .then(console.log)
+      .catch(console.error)
+    ;
   }
 
   render() {
@@ -40,6 +51,7 @@ export default class Card extends PureComponent {
       src: this.props.src,
       onClick: this.toggleModal,
       onLoad: this.onLoad,
+      onError: this.onError,
       style: this.state.loaded ? {} : { display: 'none' },
     }
 
@@ -58,5 +70,7 @@ export default class Card extends PureComponent {
 }
 
 Card.propTypes = {
+  id: PropTypes.number.isRequired,
   src: PropTypes.string.isRequired,
 };
+

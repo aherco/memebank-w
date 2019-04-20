@@ -63,8 +63,6 @@ class Home extends Component {
           ⢀⢀⢀⢀⢀⢀⢀⢀⠻⠿⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢠⣿⣿⡇<br/>
           </pre>
 	  <p>~ please enjoy ~</p>
-	  <br/>
-	  <p>disclaimer: im just starting out here so if u see a bug, email or dm me</p>
         </WindowBox>
 
 	<WindowBox id='h-faq' white='faq'>
@@ -92,6 +90,7 @@ class Home extends Component {
           <p>woomfy@memebank $ ~</p>
           <p>discord: woomfy#4179</p>
 	  <p>email: woomfy@420blaze.it</p> 
+	  <p>disclaimer: im just starting out here so if u see a bug, email or dm me</p>
 	</WindowBox>
       </div>
     );

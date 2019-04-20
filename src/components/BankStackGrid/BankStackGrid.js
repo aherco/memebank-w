@@ -21,7 +21,13 @@ class BankStackGrid extends Component {
   }
 
   unmarshallItems(items) {
-    return items.map((item) => { return <Card key={item.ID} src={item.content}/>; });
+    return items.map((item) => { 
+      return <Card 
+        key={item.ID} 
+	id={item.ID}
+        src={item.content}
+      />;
+    });
   }
 
   updateLayout() {
@@ -45,6 +51,7 @@ class BankStackGrid extends Component {
       // Layout updating
       onMouseEnter: this.updateLayout,
       onMouseLeave: this.updateLayout,
+      onScroll: this.updateLayout,
     };
 
     return (

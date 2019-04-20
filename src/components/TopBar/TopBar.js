@@ -6,8 +6,8 @@ export default class TopBar extends PureComponent {
   render() {
 
     const gcname = [
-      <span id='tb-guild'>&nbsp;~{this.props.guild}</span>,
-      <span id='tb-channel'>#{this.props.channel}</span>,
+      <span key={1} id='tb-guild'>&nbsp;~{this.props.guild}</span>,
+      <span key={2} id='tb-channel'>#{this.props.channel}</span>,
     ];
     
     // if both are not defined set default
