@@ -73,6 +73,10 @@ class Home extends Component {
 	       mentioning the bot @memebank#6654 will post a link to view the memebank. the link will delete itself after 10 seconds.'
 	  />
 	  <FAQItem
+	    q='what if i want to delete an image/gif from my memebank'
+	    a='just delete the message and memebank will cleanup automatically'
+	  />
+	  <FAQItem
 	    q='what if i don`t want a memebank for a specific channel?'
 	    a='you can simply edit the permissions of the bot to restrict it from reading and managing messages for that specific channel.'
 	  />
