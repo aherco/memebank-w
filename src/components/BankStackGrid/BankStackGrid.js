@@ -52,6 +52,7 @@ class BankStackGrid extends Component {
       onMouseEnter: this.updateLayout,
       onMouseLeave: this.updateLayout,
       onScroll: this.updateLayout,
+      onClick: this.updateLayout,
     };
 
     return (
