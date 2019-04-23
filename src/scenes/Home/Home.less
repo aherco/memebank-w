@@ -5,9 +5,20 @@
 .Home > .WindowBox {
   display: block;
   width: 30%;
-  min-width: 38em;
+  min-width: 33em;
   margin: auto;
   margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 32em) {
+  .Home > .WindowBox {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+#h-welcome .wb-content > p:not(:first-child) {
+  margin-left: 5%;
 }
 
 #h-asciiart {
@@ -21,6 +32,10 @@
 #h-contact .wb-content > *:not(:first-child):not(:last-child), 
 #h-faq .wb-content > *:not(:first-child) {
   margin-left: 5%; 
+} 
+
+#h-faq .wb-content > .FAQItem:not(:nth-child(2)) {
+  margin-top: 1em;
 }
 
 .Home a {

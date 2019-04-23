@@ -35,9 +35,9 @@ class Home extends Component {
 	  >/public memebank</a>
 	</WindowBox>
 
-        <WindowBox white='welcome'>
+        <WindowBox id='h-welcome' white='welcome'>
           <p>woomfy@memebank $ ~</p>
-	  <p>this is a site for a bot that makes photo/gif albums from your discord server</p>
+	  <p>this is a bot that makes photo/gif albums from your discord server</p>
           <pre id='h-asciiart'>
           ⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⠶⣿⣭⡧⡤⣤⣻⣛⣹⣿⣿⣿⣶⣄<br/>
           ⢀⢀⢀⢀⢀⢀⢀⢀⢀⣼⣊⣤⣶⣷⣶⣧⣤⣽⣿⣿⣿⣿⣿⣿⣷<br/>
@@ -73,8 +73,8 @@ class Home extends Component {
 	       mentioning the bot @memebank#6654 will post a link to view the memebank. the link will delete itself after 10 seconds.'
 	  />
 	  <FAQItem
-	    q='what if i want to delete an image/gif from my memebank'
-	    a='just delete the message and memebank will cleanup automatically'
+	    q='what if i want to delete an image/gif from my memebank?'
+	    a='just delete the message and memebank will cleanup automatically.'
 	  />
 	  <FAQItem
 	    q='what if i don`t want a memebank for a specific channel?'
