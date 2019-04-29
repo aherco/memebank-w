@@ -37,7 +37,7 @@ class Home extends Component {
 
         <WindowBox id='h-welcome' white='welcome'>
           <p>woomfy@memebank $ ~</p>
-	  <p>this is a bot that makes photo/gif albums from your discord server</p>
+	  <p>memebank is a discord bot that makes photo/gif albums from your discord server</p>
           <pre id='h-asciiart'>
           ⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⠶⣿⣭⡧⡤⣤⣻⣛⣹⣿⣿⣿⣶⣄<br/>
           ⢀⢀⢀⢀⢀⢀⢀⢀⢀⣼⣊⣤⣶⣷⣶⣧⣤⣽⣿⣿⣿⣿⣿⣿⣷<br/>
