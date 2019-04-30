@@ -26,6 +26,7 @@ class BankStackGrid extends Component {
         key={item.ID} 
 	id={item.ID}
         src={item.content}
+	type={item.type}
       />;
     });
   }

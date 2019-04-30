@@ -37,31 +37,51 @@ export default class Card extends Component {
   }
 
   render() {
+    let content;
+    let modal;
+	  
+    switch(this.props.type) {
+    case 'ifr':
+      const ifrProps = {
+        src: this.props.src,
+        onLoad: this.onLoad,
+        onError: this.onError,
+	frameBorder: '0',
+	allowFullScreen: true,
+        style: this.state.loaded ? {} : { display: 'none' },
+      };
 
-    const modalProps = {
-      className: 'CardModal',
-      overlayClassName: 'OverlayCardModal',
-      shouldCloseOnOverlayClick: true,
-      isOpen: this.state.showModal,
-      onRequestClose: this.toggleModal,
-      ariaHideApp: false,
-    };
+      content = <iframe title={this.props.id} {...ifrProps}/>;
+      break;
+ 
+    default:
+      const imgProps = {
+        src: this.props.src,
+        onClick: this.toggleModal,
+        onLoad: this.onLoad,
+        onError: this.onError,
+        style: this.state.loaded ? {} : { display: 'none' },
+      };
 
-    const imgProps = {
-      src: this.props.src,
-      onClick: this.toggleModal,
-      onLoad: this.onLoad,
-      onError: this.onError,
-      style: this.state.loaded ? {} : { display: 'none' },
+      content = <img alt='' {...imgProps}/>;
+
+      const modalProps = {
+        className: 'CardModal',
+        overlayClassName: 'OverlayCardModal',
+        shouldCloseOnOverlayClick: true,
+        isOpen: this.state.showModal,
+        onRequestClose: this.toggleModal,
+        ariaHideApp: false,
+      };  
+      modal = <ReactModal {...modalProps}>{content}</ReactModal>;
+      break;
     }
 
-    const img = <img alt='' {...imgProps}/>;
     const placeholder = this.state.loaded ? null : <div className='PlaceholderCard'></div>;
-    const modal = <ReactModal {...modalProps}>{img}</ReactModal>;
 
     return (
       <div className='Card'>
-        {img}
+        {content}
         {placeholder}
         {modal}
       </div>
@@ -72,5 +92,6 @@ export default class Card extends Component {
 Card.propTypes = {
   id: PropTypes.number.isRequired,
   src: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
 };
 
