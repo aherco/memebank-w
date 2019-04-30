@@ -31,7 +31,7 @@ class Home extends Component {
 	  >/join discord</a>
 
 	  <a 
-	    href='http://www.memebank.me/memebank-official/public/568601893673107466'
+	    href={`${process.env.REACT_APP_DOMAIN}/memebank-official/public-memebank/568601893673107466`}
 	  >/public memebank</a>
 	</WindowBox>
 

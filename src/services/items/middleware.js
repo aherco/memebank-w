@@ -9,7 +9,7 @@ const itemsMiddleware = store => next => action => {
 
   case GET_ITEMS_BY_CHANNEL:
     request
-      .get(`https://1t7lfirpvc.execute-api.us-east-1.amazonaws.com/dev/items/channel/${action.channelID}`)
+      .get(`${process.env.REACT_APP_API_ENDPOINT}/items/channel/${action.channelID}`)
       .then(res => { next(getItemsByChannelSuccess(res.body)); })
       .catch(err => { console.log(err); })
     ;

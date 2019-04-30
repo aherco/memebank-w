@@ -57,7 +57,7 @@ class BankStackGrid extends Component {
 
     return (
       <div className='BankStackGrid'>
-        <StackGrid {...gridProps}>{this.state.items}</StackGrid>
+	      <StackGrid {...gridProps}>{this.state.items}</StackGrid>
       </div>
     );
   }
