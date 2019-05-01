@@ -4,12 +4,12 @@
 
 .Home > .WindowBox {
   display: block;
-  max-width: 40%;
+  width: 40%;
   margin: auto;
   margin-bottom: 1em;
 }
 
-@hWidth: 20em;
+@hWidth: 18em;
 
 #h-home {
   .wb-content > p {
@@ -71,9 +71,16 @@
   }
 }
 
+#h-contact {
+  & .wb-content > p:first-child {
+    text-align: left;
+    margin: 0 auto;
+  }
+}
+
 @media only screen and (max-width: 5em * @hWidth) {
   #h-home {
-    div:first-of-type {
+    .wb-content div:first-of-type {
       margin-right: 0;
       margin-bottom: 1em;
     }
@@ -82,5 +89,13 @@
       display: block;
       width: 100%;
     }
+  }
+}
+
+@media only screen and (max-width: 3em * @hWidth) {
+  .Home > .WindowBox {
+    width: 90%;
+    margin: 0 5%;
+    margin-bottom: 1em;
   }
 }

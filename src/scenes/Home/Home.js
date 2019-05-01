@@ -51,7 +51,7 @@ class Home extends Component {
 
 	<WindowBox id='h-faq' white='faq'>
 	  <p>woomfy@memebank $ ~</p>
-	  <p id='h-description'>memebank is a bot that makes photo/gif albums from your discord channels</p>
+	  <p id='h-description'>memebank is a bot that makes photo/gif albums from your discord channels.</p>
 	  <FAQItem
 	    q='how does it work?'
 	    a='when you post an image/gif in a text channel, the bot will add it to a memebank. mentioning the bot @memebank#6654 will post a link to view the memebank.'
@@ -72,6 +72,12 @@ class Home extends Component {
 	    q='what if my question isn`t answered here?'
 	    a='then hit me up at one of the places listed below.'
 	  />
+	</WindowBox>
+	<WindowBox id='h-contact' white='contact'>
+	  <p>woomfy@memebank $ ~</p>
+	  <p>discord: woomfy#4179</p>
+	  <p>email: woomfy@420blaze.it</p>
+	  <p>feel free to hit me up if you see a bug or if you have a question.</p>
 	</WindowBox>
       </div>
     );
