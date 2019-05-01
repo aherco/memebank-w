@@ -4,40 +4,66 @@
 
 .Home > .WindowBox {
   display: block;
-  width: 30%;
-  min-width: 41em;
+  max-width: 40%;
   margin: auto;
   margin-bottom: 1em;
 }
 
-@media only screen and (max-width: 41em) {
-  .Home > .WindowBox {
-    width: 100%;
-    min-width: 0;
+@hWidth: 20em;
+
+#h-home {
+  p {
+    text-align: left;
+    margin: 0 auto 1em auto;
+  }
+
+  h1 {
+    font-size: 4em;
+    line-height: 1em;
+    margin: 0;
+  }
+  
+  #h-logo-pink {
+    color: #ffb2e8;
+  }
+
+  .wb-content > *:not(:first-child) {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  div:first-of-type {
+    margin-right: 2em;
+  }
+
+  .wb-content > div > * {
+    display: block;
+  }
+
+  .HomeButton {
+    width: @hWidth;
+    margin: 1em auto;
+  }
+
+  img {
+    object-fit: cover;
+    height: @hWidth;
+    width: @hWidth;
+    border-radius: 1em;
+    margin: auto;
   }
 }
 
-#h-welcome .wb-content > p:not(:first-child) {
-  margin-left: 5%;
-}
+@media only screen and (max-width: 5em * @hWidth) {
+  #h-home {
+    div:first-of-type {
+      margin-right: 0;
+      margin-bottom: 1em;
+    }
 
-#h-asciiart {
-  margin-left: 25%;
-}
-
-#h-nav .wb-content > * {
-  display: inline-block;
-}
-
-#h-contact .wb-content > *:not(:first-child):not(:last-child), 
-#h-faq .wb-content > *:not(:first-child) {
-  margin-left: 5%; 
-} 
-
-#h-faq .wb-content > .FAQItem:not(:nth-child(2)) {
-  margin-top: 1em;
-}
-
-.Home a {
-  color: white;
+    .wb-content > * {
+      display: block;
+      width: 100%;
+    }
+  }
 }
