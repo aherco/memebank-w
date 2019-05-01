@@ -12,7 +12,7 @@
 @hWidth: 20em;
 
 #h-home {
-  p {
+  .wb-content > p {
     text-align: left;
     margin: 0 auto 1em auto;
   }
@@ -51,6 +51,23 @@
     width: @hWidth;
     border-radius: 1em;
     margin: auto;
+  }
+}
+
+#h-faq {
+  & .wb-content > p:first-child {
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  #h-description {
+    text-align: center;
+    margin-top: 2em;
+  }
+
+  .FAQItem {
+    margin-top: 2em;
+    margin-left: 5%;
   }
 }
 
