@@ -30,7 +30,7 @@ export default class Card extends Component {
   
   onError() {
     request
-      .delete(`${process.env.REACT_APP_API_ENDPOINT}/items/${this.props.id}`)
+      .delete(`${process.env.REACT_APP_API_ENDPOINT}/items/${this.props.id}/${this.props.msgid}`)
       .then(console.log)
       .catch(console.error)
     ;

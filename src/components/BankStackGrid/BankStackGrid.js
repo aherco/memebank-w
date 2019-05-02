@@ -25,6 +25,7 @@ class BankStackGrid extends Component {
       return <Card 
         key={item.ID} 
 	id={item.ID}
+	msgid={item.message_id}
         src={item.content}
 	type={item.type}
       />;

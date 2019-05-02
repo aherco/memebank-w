@@ -54,7 +54,7 @@ class Home extends Component {
 	  <p id='h-description'>memebank is a bot that makes photo/gif albums from your discord channels.</p>
 	  <FAQItem
 	    q='how does it work?'
-	    a='when you post an image/gif in a text channel, the bot will add it to a memebank. mentioning the bot @memebank#6654 will post a link to view the memebank.'
+	    a='when you post an image/gif in a text channel, the bot will add it to a memebank. mentioning the bot @memebank#7711 will post a link to view the memebank.'
 	  />
 	  <FAQItem
 	    q='what if i want to delete an image/gif from my memebank?'
