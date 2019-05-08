@@ -1,0 +1,63 @@
+.PageBar {
+  & > * {
+    display: inline-block;
+    border: none;
+    font-size: 1em;
+    text-align: center;
+    padding: 0.5em 0;
+    color: white;
+    background-color: #102d59;
+    cursor: pointer;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+  }
+
+  a {
+    padding: 0.5em 2em;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .p-break {
+    background-color: #091b35;
+  }
+
+  .p-active {
+    background-color: #091b35;
+  }
+
+  .p-nav {
+    margin: 0 0.25em;
+    border-radius: 0.25em;
+
+    &:hover {
+      filter: brightness(110%);
+    }
+
+    &:active {
+      filter: brightness(90%);
+    }
+  }
+
+  .p-page {
+    &:hover {
+      filter: brightness(110%);
+    }
+
+    &:active {
+      filter: brightness(90%);
+    }
+
+    &:nth-of-type(2) {
+      border-top-left-radius: 0.25em;
+      border-bottom-left-radius: 0.25em;
+    }
+
+    &:nth-last-of-type(2) {
+      border-top-right-radius: 0.25em;
+      border-bottom-right-radius: 0.25em;
+    }
+  }
+}

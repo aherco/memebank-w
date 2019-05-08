@@ -26,7 +26,7 @@ class App extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  getItemsByChannel: (id) => { dispatch(getItemsByChannel(id)); },
+  getItemsByChannel: (id, page, limit) => { dispatch(getItemsByChannel(id, page, limit)); },
 });
 
 export default connect(
