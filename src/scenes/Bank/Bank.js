@@ -51,7 +51,6 @@ class Bank extends Component {
   }
 
   onPageChange(page) {
-    console.log(page.selected);
     this.props.history.push({
       pathname: this.props.location.pathname,
       search: qs.stringify({ page: String(page.selected), limit: this.state.limit}, { addQueryPrefix: true }),
