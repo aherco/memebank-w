@@ -39,13 +39,29 @@ export default class Card extends Component {
   render() {
     let content;
     let modal;
-	  
+
     switch(this.props.type) {
+    case 'vid':
+      const vidProps = {
+        controls: true,
+        loop: true,
+        muted: true,
+	onError: this.onError,
+      };
+
+      content = (
+        <video {...vidProps}>
+	  <source src={this.props.src} type='video/webm'/>
+	  <source src={this.props.src} type='video/mp4'/>
+	</video>
+      );
+      break;
+	      
     case 'ifr':
       const ifrProps = {
-        src: this.props.src,
-        onLoad: this.onLoad,
-        onError: this.onError,
+	src: this.props.src + '?autoplay=1&hd=1',
+	onLoad: this.onLoad,
+	onError: this.onError,
 	frameBorder: '0',
 	allowFullScreen: true,
         style: this.state.loaded ? {} : { display: 'none' },
@@ -57,10 +73,10 @@ export default class Card extends Component {
     default:
       const imgProps = {
         src: this.props.src,
-        onClick: this.toggleModal,
         onLoad: this.onLoad,
         onError: this.onError,
         style: this.state.loaded ? {} : { display: 'none' },
+        onClick: this.toggleModal,
       };
 
       content = <img alt='' {...imgProps}/>;
@@ -73,11 +89,12 @@ export default class Card extends Component {
         onRequestClose: this.toggleModal,
         ariaHideApp: false,
       };  
+
       modal = <ReactModal {...modalProps}>{content}</ReactModal>;
       break;
     }
 
-    const placeholder = this.state.loaded ? null : <div className='PlaceholderCard'></div>;
+    const placeholder = this.state.loaded || this.props.type === 'vid' ? null : <div className='PlaceholderCard'></div>;
 
     return (
       <div className='Card'>
