@@ -58,6 +58,11 @@ class Bank extends Component {
   }
 
   render() {
+    let pageCount = 0;
+    if (this.props.items) {
+      pageCount = this.props.items.count / this.state.limit;
+    }
+
     return (
       <div className='Bank'>
         <TopBar
@@ -69,8 +74,8 @@ class Bank extends Component {
 	  <BankStackGrid items={this.props.items.batch}/>
 	  
         </div> : null}
-	{this.props.items ? <PageBar
-          pageCount={this.props.items.count / this.state.limit}
+	{this.props.items && pageCount > 1 ? <PageBar
+          pageCount={pageCount}
           currentPage={Number(this.state.page)}
           onPageChange={this.onPageChange}
         /> : null}
