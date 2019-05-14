@@ -22,8 +22,12 @@ class Home extends Component {
     window.open(process.env.REACT_APP_BOT_INVITE);
   }
 
-  joinDiscord() {
+  joinServer() {
     window.open(process.env.REACT_APP_DISCORD_JOIN);
+  }
+
+  vote() {
+    window.open(process.env.REACT_APP_VOTE);
   }
 
   viewMemebank() {
@@ -43,7 +47,8 @@ class Home extends Component {
 	  <div>
 	    <h1>meme<span id='h-logo-pink'>bank</span></h1>
 	    <HomeButton value='invite bot' onClick={this.inviteBot}/>
-	    <HomeButton value='join discord' onClick={this.joinDiscord}/>
+	    <HomeButton value='join server' onClick={this.joinServer}/>
+	    <HomeButton value='vote on discordbots.org' onClick={this.vote}/>
 	    <HomeButton value='view public memebank' onClick={this.viewMemebank}/>
 	    <p>~ two dabs and a cat edition ~</p>
           </div>
@@ -51,14 +56,14 @@ class Home extends Component {
 
 	<WindowBox id='h-faq' white='faq'>
 	  <p>woomfy@memebank $ ~</p>
-	  <p id='h-description'>memebank is a bot that makes photo/gif albums from your discord channels.</p>
+	  <p id='h-description'>memebank is a bot that makes image/gif/gfycat/webm albums from your discord channels.</p>
 	  <FAQItem
 	    q='how does it work?'
-	    a='when you post an image/gif in a text channel, the bot will add it to a memebank. mentioning the bot @memebank#7711 will post a link to view the memebank.'
+	    a='when you post an image/gif/gfycat/webm in a text channel, the bot will add it to a memebank. mentioning the bot @memebank#7711 will post a link to view the memebank.'
 	  />
 	  <FAQItem
-	    q='what if i want to delete an image/gif from my memebank?'
-	    a='just delete the message containing the image and it will be deleted from memebank.'
+	    q='what if i want to delete an item from my memebank?'
+	    a='just delete the message containing the item and it will be deleted from memebank.'
 	  />
 	  <FAQItem
 	    q='what if i don`t want a memebank for a specific channel?'
@@ -78,6 +83,12 @@ class Home extends Component {
 	  <p>discord: woomfy#4179</p>
 	  <p>email: woomfy@420blaze.it</p>
 	  <p>feel free to hit me up if you see a bug or if you have a question.</p>
+	</WindowBox>
+	
+	<WindowBox white='status'>
+	  <a href="https://discordbots.org/bot/572999460834246657" >
+	    <img src="https://discordbots.org/api/widget/572999460834246657.svg" alt="memebank" />
+	  </a>
 	</WindowBox>
       </div>
     );
