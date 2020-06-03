@@ -80,16 +80,14 @@ class Home extends Component {
 	</WindowBox>
 	<WindowBox id='h-contact' white='contact'>
 	  <p>woomfy@memebank $ ~</p>
-	  <p>discord: woomfy#4179</p>
+	  <p>discord: woomfy#0002</p>
 	  <p>email: woomfy@420blaze.it</p>
 	  <p>feel free to hit me up if you see a bug or if you have a question.</p>
 	</WindowBox>
 	
-	<WindowBox white='status'>
-	  <a href="https://discordbots.org/bot/572999460834246657" >
+          <a href="https://discordbots.org/bot/572999460834246657" >
 	    <img src="https://discordbots.org/api/widget/572999460834246657.svg" alt="memebank" />
 	  </a>
-	</WindowBox>
       </div>
     );
   }
